@@ -64,7 +64,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Manners" id="gb7-DM-8kl">
                         <barButtonItem key="backBarButtonItem" title="Back" id="LfS-ru-zyB"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="bGR-IE-uiq"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="bGR-IE-uiq">
+                            <connections>
+                                <segue destination="HD5-cb-fjF" kind="show" identifier="mail" id="haH-XU-QB7"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -75,6 +79,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1116.5" y="398.5"/>
+        </scene>
+        <!--Mail-->
+        <scene sceneID="kj4-iR-eKi">
+            <objects>
+                <viewController id="HD5-cb-fjF" customClass="Mail" customModule="assignment4" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Odt-Qn-MZs"/>
+                        <viewControllerLayoutGuide type="bottom" id="i2q-AO-re9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eOH-wp-vGT">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Caregivers Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8jA-3Y-vNd">
+                                <rect key="frame" x="61" y="135" width="252" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E8I-TM-QaS">
+                                <rect key="frame" x="164" y="173" width="46" height="30"/>
+                                <state key="normal" title="Send"/>
+                                <connections>
+                                    <action selector="sendEmail:" destination="HD5-cb-fjF" eventType="touchUpInside" id="Mmx-Pi-TCP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="email" destination="8jA-3Y-vNd" id="sln-wu-Xgx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MHt-Lm-CO1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1562.5" y="-335.5"/>
         </scene>
         <!--Detail-->
         <scene sceneID="c3V-4a-b4u">

@@ -50,7 +50,11 @@ class Main: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        (segue.destinationViewController as! Detail).manner = manners[sender!.row]
+        if (segue.identifier == "detail") {
+            (segue.destinationViewController as! Detail).manner = manners[sender!.row]
+        } else if (segue.identifier == "mail") {
+            (segue.destinationViewController as! Mail).manners = manners
+        }
     }
 
 }
