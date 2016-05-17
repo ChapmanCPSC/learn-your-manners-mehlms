@@ -14,7 +14,6 @@ class Mail: UIViewController, MFMailComposeViewControllerDelegate {
     @IBOutlet weak var email: UITextField!
     
     var manners : [Manner]?
-    let defaults = NSUserDefaults.standardUserDefaults()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,13 +21,23 @@ class Mail: UIViewController, MFMailComposeViewControllerDelegate {
         self.title = "Send Report"
         email.becomeFirstResponder()
         
-        if let lastEmail = defaults.stringForKey("email") {
+        if let lastEmail = Theme.defaults.stringForKey("email") {
             email.text = lastEmail
+        }
+        
+        if (Theme.light) {
+            view.backgroundColor = UIColor.whiteColor()
+            email.textColor = UIColor.blackColor()
+            email.backgroundColor = UIColor.whiteColor()
+        } else {
+            view.backgroundColor = UIColor.blackColor()
+            email.textColor = UIColor.whiteColor()
+            email.backgroundColor = UIColor.blackColor()
         }
     }
     
     override func viewWillDisappear(animated: Bool) {
-        defaults.setValue(email.text, forKey: "email")
+        Theme.defaults.setValue(email.text, forKey: "email")
     }
     
     @IBAction func sendEmail(sender: AnyObject) {

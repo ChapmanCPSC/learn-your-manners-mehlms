@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		875151DA1CD1AD9B002974ED /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875151D91CD1AD9B002974ED /* Detail.swift */; };
 		875151DC1CD1AE98002974ED /* Mail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875151DB1CD1AE98002974ED /* Mail.swift */; };
+		87CD287F1CEA83DB00292E5A /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CD287E1CEA83DB00292E5A /* Settings.swift */; };
 		87DC75411CBF3397007188F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DC75401CBF3397007188F5 /* AppDelegate.swift */; };
 		87DC75431CBF3397007188F5 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DC75421CBF3397007188F5 /* Main.swift */; };
 		87DC75461CBF3397007188F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87DC75441CBF3397007188F5 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		875151D91CD1AD9B002974ED /* Detail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
 		875151DB1CD1AE98002974ED /* Mail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mail.swift; sourceTree = "<group>"; };
+		87CD287E1CEA83DB00292E5A /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		87DC753D1CBF3397007188F5 /* assignment4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = assignment4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87DC75401CBF3397007188F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87DC75421CBF3397007188F5 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				87DC75421CBF3397007188F5 /* Main.swift */,
 				875151DB1CD1AE98002974ED /* Mail.swift */,
 				87DC75441CBF3397007188F5 /* Main.storyboard */,
+				87CD287E1CEA83DB00292E5A /* Settings.swift */,
 				87DC75471CBF3397007188F5 /* Assets.xcassets */,
 				87DC75491CBF3397007188F5 /* LaunchScreen.storyboard */,
 				87DC754C1CBF3397007188F5 /* Info.plist */,
@@ -146,6 +149,7 @@
 				87DC75431CBF3397007188F5 /* Main.swift in Sources */,
 				87DC75411CBF3397007188F5 /* AppDelegate.swift in Sources */,
 				875151DA1CD1AD9B002974ED /* Detail.swift in Sources */,
+				87CD287F1CEA83DB00292E5A /* Settings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

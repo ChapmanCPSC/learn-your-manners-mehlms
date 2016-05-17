@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F24b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NWg-3h-vHS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F28b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NWg-3h-vHS">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -33,14 +33,14 @@
                                                     <rect key="frame" x="15" y="20" width="40" height="23"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9dX-il-jU5">
                                                     <rect key="frame" x="15" y="43" width="35" height="16"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -64,6 +64,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Manners" id="gb7-DM-8kl">
                         <barButtonItem key="backBarButtonItem" title="Back" id="LfS-ru-zyB"/>
+                        <barButtonItem key="leftBarButtonItem" title="Settings" id="neu-2u-f6D">
+                            <connections>
+                                <segue destination="nhl-1Q-OMG" kind="show" id="yNg-49-YRt"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="bGR-IE-uiq">
                             <connections>
                                 <segue destination="HD5-cb-fjF" kind="show" identifier="mail" id="haH-XU-QB7"/>
@@ -78,7 +83,50 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1116.5" y="398.5"/>
+            <point key="canvasLocation" x="1084.5" y="398.5"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="GSk-X3-5L5">
+            <objects>
+                <viewController id="nhl-1Q-OMG" customClass="Settings" customModule="assignment4" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="99X-dc-2O5"/>
+                        <viewControllerLayoutGuide type="bottom" id="JqH-XM-ERq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bYA-8G-oqw">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ovv-Fu-VTV">
+                                <rect key="frame" x="163" y="286" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switched:" destination="nhl-1Q-OMG" eventType="valueChanged" id="T4f-K4-CYG"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dark" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kD3-m7-r6I">
+                                <rect key="frame" x="119" y="291" width="36" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Light" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7e-ot-imp">
+                                <rect key="frame" x="223" y="291" width="39" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="dark" destination="kD3-m7-r6I" id="AOV-9r-vzm"/>
+                        <outlet property="light" destination="h7e-ot-imp" id="VZ5-1H-RCg"/>
+                        <outlet property="switchThing" destination="Ovv-Fu-VTV" id="buh-YY-05s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Vi-tU-x2v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1084.5" y="-347.5"/>
         </scene>
         <!--Mail-->
         <scene sceneID="kj4-iR-eKi">
@@ -135,7 +183,6 @@
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Description..." textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="3jR-WL-C9w">
                                 <rect key="frame" x="20" y="256" width="335" height="327"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -177,7 +224,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6rI-fd-3fA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="683.5" y="398.5"/>
+            <point key="canvasLocation" x="623.5" y="398.5"/>
         </scene>
     </scenes>
 </document>

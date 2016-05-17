@@ -22,6 +22,14 @@ class Detail: UIViewController {
         image.image = manner?.image
         descriptionTxt.text = manner?.description
         manner?.visited = true
+        
+        if (Theme.light) {
+            view.backgroundColor = UIColor.whiteColor()
+            descriptionTxt?.textColor = UIColor.blackColor()
+        } else {
+            view.backgroundColor = UIColor.blackColor()
+            descriptionTxt?.textColor = UIColor.whiteColor()
+        }
     }
 
 }

@@ -8,6 +8,11 @@
 
 import UIKit
 
+class Theme {
+    static let defaults = NSUserDefaults.standardUserDefaults()
+    static var light = defaults.boolForKey("light")
+}
+
 class Main: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
@@ -26,6 +31,15 @@ class Main: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func viewWillAppear(animated: Bool) {
         tableView.reloadData()
+        if (Theme.light) {
+            tableView.backgroundColor = UIColor.whiteColor()
+            self.navigationController?.navigationBar.barStyle = UIBarStyle.Default
+            self.navigationController?.navigationBar.tintColor = UIColor.blackColor()
+        } else {
+            tableView.backgroundColor = UIColor.blackColor()
+            self.navigationController?.navigationBar.barStyle = UIBarStyle.Black
+            self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        }
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -40,6 +54,15 @@ class Main: UIViewController, UITableViewDelegate, UITableViewDataSource {
             cell.accessoryType = .Checkmark
         } else {
             cell.accessoryType = .DisclosureIndicator
+        }
+        if (Theme.light) {
+            cell.backgroundColor = UIColor.whiteColor()
+            cell.textLabel?.textColor = UIColor.blackColor()
+            cell.detailTextLabel?.textColor = UIColor.blackColor()
+        } else {
+            cell.backgroundColor = UIColor.blackColor()
+            cell.textLabel?.textColor = UIColor.whiteColor()
+            cell.detailTextLabel?.textColor = UIColor.whiteColor()
         }
         return cell
     }
